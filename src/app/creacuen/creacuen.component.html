@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Inicio de sesion</title>
+    <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica Neue, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: #EEEEEE;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #2E2E2E;
+    margin-bottom:  25px;
+}
+
+label, p {
+    font-size: 17px;
+    color: #575757;
+    margin-bottom: 10px;
+}
+
+input{
+    padding: 17px 11px;
+    border: 1px solid #ca0000;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    background-color: #FAFAFC;
+    outline:  none;
+    color:#ca0000;
+    font-size: 17px;
+}
+
+.btn-1 {
+    background-color: #ef0000;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-1:hover{
+    background-color: #280000;
+}
+
+.remember {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+@media(max-width:991px) {
+
+    body {
+        padding: 30px;
+    }
+
+    form{
+        width: 100%;
+    }
+}</style>
+</head>
+<body>
+    
+    <form id="loginForm">
+        <h2>Inicio de Sesion</h2>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" required> 
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required> 
+
+        <div class="remember">
+            <p><a href="registroo.html">Registrate</a></p>
+            <p><a href="recuperacion.html">Olvide mi clave</a></p>
+        </div>
+
+        <input type="submit" class="btn-1" value="Iniciar">
+        
+        <p id="mensaje" style="color: red;"></p>
+    </form>
+</body>
+</html>
