@@ -1,20 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router'; // Asegúrate de que RouterModule y RouterOutlet estén aquí
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterModule, RouterOutlet], // Importa RouterModule para los routerLink y RouterOutlet para el <router-outlet>
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  registrar() {
-    const codigo = (document.getElementById('codigo') as HTMLInputElement).value;
-    const password = (document.getElementById('password') as HTMLInputElement).value;
-    
-    if (codigo && password) {
-      const mensaje = document.getElementById('mensaje');
-      if (mensaje) mensaje.innerText = '¡Registro exitoso!';
-    }
-  }
+  title: string = 'Mi Aplicación'; // Título general de la aplicación
+  // El método 'registrar()' YA NO DEBE ESTAR AQUÍ, ahora está en RegistroComponent
 }
